@@ -23,7 +23,7 @@ Constants Creation
 Usage
 
     /**
-     * @Produces("Content-Type: application/json")
+     * @Produces(MediaType.APPLICATION_JSON)
      * @RequestMapping({value: "/dashboard/{action}", method: HttpMethod.POST})
      */
     public function execute(string $action) {
