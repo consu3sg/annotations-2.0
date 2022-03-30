@@ -55,6 +55,5 @@ Constants Creation
 		}
 		?>
 		
-	Note:
-
-		The constant HttpMethod.POST will be replaced with "POST" and MediaType.APPLICATION_JSON replaced with "application/json" when the annotation is parsed
+Note:
+	The constant HttpMethod.POST will be replaced with "POST" and MediaType.APPLICATION_JSON replaced with "application/json" when the annotation is parsed
