@@ -39,7 +39,7 @@ Constants Creation
 	
 # implementation example
 
-	Controller:
+
 		<?php 
 		 
 		 class DashboardController extends Controller {
