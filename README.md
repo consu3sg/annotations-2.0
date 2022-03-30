@@ -39,15 +39,18 @@ Constants Creation
 	
 	Usage
 		<?php 
-		 ...
-		/**
-		 * @Produces(MediaType.APPLICATION_JSON)
-		 * @RequestMapping({value: "/dashboard/{action}", method: HttpMethod.POST})
-		 */
-		public function execute(string $action) {
-			return $action;
+		 
+		 class DashboardController extends Controller {
+			 
+			/**
+			 * @Produces(MediaType.APPLICATION_JSON)
+			 * @RequestMapping({value: "/dashboard/{action}", method: HttpMethod.POST})
+			 */
+			public function execute(string $action) {
+				return $action;
+			}
+			
 		}
-		...
 		?>
 		
 	Note
