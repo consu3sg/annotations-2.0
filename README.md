@@ -3,7 +3,7 @@ If you want to create your own PHP Framework, this little package will be very u
 
 Requires PHP >= 7.2
 
-# annotations constants
+# annotations constants (New Feature)
 
 You can define the constants in a simple PHP file as below
 
@@ -11,7 +11,7 @@ Constants Creation
 	File Name: constants.php (import the this file before including library)
 	
         <?php
-
+		
         global $ANNOTATION_CONSTANTS;
 
         $ANNOTATION_CONSTANTS = [
@@ -35,12 +35,14 @@ Constants Creation
                 "WILDCARD" => "*/*",
             ]
         ];
+		?>
 
 
 	
 	
 Usage
-
+	<?php 
+	 ...
     /**
      * @Produces(MediaType.APPLICATION_JSON)
      * @RequestMapping({value: "/dashboard/{action}", method: HttpMethod.POST})
@@ -48,7 +50,8 @@ Usage
     public function execute(string $action) {
         return $action;
     }
-	
+	...
+	?>
 Note
 
-	The constant HttpMethod.POST will be replaced with "POST" when the annotation is parsed
+	The constant HttpMethod.POST will be replaced with "POST" and MediaType.APPLICATION_JSON replaced with "application/json" when the annotation is parsed
