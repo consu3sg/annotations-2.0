@@ -35,7 +35,7 @@ Constants Creation
                 "WILDCARD" => "*/*",
             ]
         ];
-		?>
+		
 	
 	
 	-Usage:
