@@ -9,21 +9,39 @@ You can define the constants in a simple PHP file as below
 
 Constants Creation
 	File Name: constants.php (import the this file before including library)
-	<?php
+        <?php
 
-	global $ANNOTATION_CONSTANTS;
+        global $ANNOTATION_CONSTANTS;
 
-	$ANNOTATION_CONSTANTS = [
-		"HttpMethod.POST" => "\"POST\"",
-		"HttpMethod.GET" => "\"GET\""
-	];
-	?>
+        $ANNOTATION_CONSTANTS = [
+            "HttpMethod" => [
+                "POST" => "POST",
+                "GET" => "GET",
+            ],
+            "MediaType" => [
+                "APPLICATION_ATOM_XML" => "application/atom+xml",
+                "APPLICATION_FORM_URLENCODED" => "application/x-www-form-urlencoded",
+                "APPLICATION_JSON" => "application/json",
+                "APPLICATION_OCTET_STREAM" => "application/octet-stream",
+                "APPLICATION_SVG_XML" => "application/svg+xml",
+                "APPLICATION_XHTML_XML" => "application/xhtml+xml",
+                "APPLICATION_XML" => "application/xml",
+                "CHARSET_PARAMETER" => "*",
+                "MULTIPART_FORM_DATA" => "multipart/form-data",
+                "TEXT_HTML" => "text/html",
+                "TEXT_PLAIN" => "text/plain",
+                "TEXT_XML" => "text/xml",
+                "WILDCARD" => "*/*",
+            ]
+        ];
+
+
 	
 	
 Usage
 
     /**
-     * @Produces(MediaType.APPLICATION_JSON)
+     * @Produces("Content-Type: application/json")
      * @RequestMapping({value: "/dashboard/{action}", method: HttpMethod.POST})
      */
     public function execute(string $action) {
